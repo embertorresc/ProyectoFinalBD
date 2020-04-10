@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="latin1" collation="latin1_swedish_ci">banco</database>
+</source>
+<canvas zoom="150">
+<tables>
+<table name="cliente" view="standard">
+<left>69</left>
+<top>140</top>
+<width>286</width>
+<height>269</height>
+<sql_create_table>CREATE TABLE `cliente` (
+  `IdCliente` int(11) NOT NULL,
+  `Cedula` varchar(11) DEFAULT NULL,
+  `Nombre` varchar(50) DEFAULT NULL,
+  `Apellido` varchar(50) DEFAULT NULL,
+  `Sexo` varchar(1) DEFAULT NULL,
+  `IdSegmento` varchar(15) DEFAULT NULL,
+  `IdEjecutivo` varchar(20) DEFAULT NULL,
+  `Edad` int(2) DEFAULT NULL,
+  PRIMARY KEY (`IdCliente`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="ejecutivo" view="standard">
+<left>530</left>
+<top>273</top>
+<width>381</width>
+<height>227</height>
+<sql_create_table>CREATE TABLE `ejecutivo` (
+  `IdEjecutivo` int(11) NOT NULL AUTO_INCREMENT,
+  `Usuario` varchar(8) DEFAULT NULL,
+  `Nombre` varchar(40) DEFAULT NULL,
+  `Sexo` varchar(1) DEFAULT NULL,
+  `FechaContratacion` date DEFAULT NULL,
+  `Sueldo` int(11) DEFAULT NULL,
+  PRIMARY KEY (`IdEjecutivo`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="segmento" view="standard">
+<left>439</left>
+<top>22</top>
+<width>307</width>
+<height>198</height>
+<sql_create_table>CREATE TABLE `segmento` (
+  `IdSegmento` int(11) NOT NULL,
+  `Segmento` varchar(15) DEFAULT NULL,
+  `ManejoMes` varchar(20) DEFAULT NULL,
+  `TipoBanca` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`IdSegmento`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>
